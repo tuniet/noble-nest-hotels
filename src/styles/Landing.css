@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Balkind;
+    src: url('../fonts/balkind-demo.otf');
+}
+.hero{
+    height: 100vh;
+    background-image: url(../images/Landinghero.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.hero-txt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-title{
+    font-size: 100px;
+    font-family: Balkind;
+    font-weight: 350;
+    color: white;
+}

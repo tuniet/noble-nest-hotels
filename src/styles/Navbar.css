@@ -1,0 +1,18 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    .left, .right{
+        display: flex;
+    }
+    .navbar-title{
+        height: 100%;
+        width: 50px;
+    }
+    .logo{
+        width: 140%;
+        height: 110%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
