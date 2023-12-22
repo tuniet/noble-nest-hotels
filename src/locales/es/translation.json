@@ -1,10 +1,9 @@
 {
   "welcome": "¡Bienvenido a nuestro sitio web de hotel!",
   "homeContent": "Explora nuestros increíbles servicios y alojamientos.",
-  "about": "Acerca de nosotros",
+  "facilities": "Facilities",
   "aboutContent": "Obtén más información sobre nuestro hotel y su historia.",
   "hotel": "Hotel",
   "home": "Inicio",
-  "rooms": "Habitaciones",
-  "contact": "Contacto"
+  "rooms": "Habitaciones"
 }

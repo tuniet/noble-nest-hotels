@@ -3,29 +3,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
-import { BiMenuAltRight } from "react-icons/bi";
-import logo from '../images/logo.png'
+import { IoMdMenu } from "react-icons/io";
 
 
 const Navbar = () => {
   const { t } = useTranslation();
 
-
-
-
   return (
     <div className="navbar">
-      <div className="left">
-        <BiMenuAltRight /> MENU
-        <div className='menu-plegable'>
-          <Link to="/about" className="nav-link">{t('about')}</Link>
-          <Link to="/rooms" className="nav-link">{t('rooms')}</Link>
-        </div>
-      </div>
-      <Link to="/" className="navbar-title"><img src={logo} className='logo'/></Link>
+      <Link to="/" className="navbar-title link">NOBEL NEST</Link>
       <div className="right">
+        <Link to="/facilities" className="link">{t('facilities')}</Link>
+        <Link to="/rooms" className="link">{t('rooms')}</Link>
+        <span className='separator'></span>
         <LanguageSelector />
-        <Link to="/contact" className="nav-link">{t('contact')}</Link>
+         MENU <IoMdMenu />
       </div>
     </div>
   );

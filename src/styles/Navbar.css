@@ -1,18 +1,35 @@
 .navbar{
+    font-family: Balkind;
+    position: absolute;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between  ;
     height: 100px;
+    color: white;
+    align-items: center;
+
     .left, .right{
         display: flex;
     }
     .navbar-title{
-        height: 100%;
-        width: 50px;
+        font-size: 32px;
+        margin-left: 20px;
     }
-    .logo{
-        width: 140%;
-        height: 110%;
-        object-fit: cover;
-        object-position: center;
+    .right{
+        display: flex;
+        gap: 10px;
+        font-size: 22px;
+        text-align: center;
+        margin-right: 20px
     }
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.separator{
+    width: 2px;
+    height: 20px;
+    margin: 5px;
+    border-left: 1px solid white;
 }

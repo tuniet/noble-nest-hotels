@@ -1,12 +1,11 @@
 {
   "welcome": "Welcome to our hotel website!",
   "homeContent": "Explore our amazing services and accommodations.",
-  "about": "About Us",
+  "facilities": "Facilities",
   "aboutContent": "Learn more about our hotel and its history.",
   "hotel": "Hotel",
   "home": "Home",
-  "rooms": "Rooms",
-  "contact": "Contact"
+  "rooms": "Rooms"
 }
 
   

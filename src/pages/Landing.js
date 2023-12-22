@@ -1,6 +1,7 @@
 import '../styles/Landing.css'
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Booking from '../components/Booking';
 
 const Landing = () => {
   const { t } = useTranslation();
@@ -10,16 +11,15 @@ const Landing = () => {
       <div className='hero'>
         <div className='hero-txt'>
           <h1 className='hero-title'>NOBEL NEST HOTEL</h1>
-          <div className='reservations'>
-            <span className='reservations-item'></span>
-            <span className='reservations-item'></span>
-            <span className='reservations-item'></span>
-            <span className='reservations-button'></span>
-          </div>
+          <Booking />
         </div>
         <div className='hero-info'>
 
         </div>
+      </div>
+      <div className='rooms'>
+        
+
       </div>
     </div>
   );
