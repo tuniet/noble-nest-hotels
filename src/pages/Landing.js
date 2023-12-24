@@ -2,7 +2,7 @@ import '../styles/Landing.css'
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Booking from '../components/Booking';
-
+import RoomsLanding from '../components/RoomsLanding';
 const Landing = () => {
   const { t } = useTranslation();
 
@@ -18,7 +18,7 @@ const Landing = () => {
         </div>
       </div>
       <div className='rooms'>
-        
+        <RoomsLanding />
 
       </div>
     </div>

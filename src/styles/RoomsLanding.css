@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .roomslanding {
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .list {
+    height: 60vh;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+  
+  .list li {
+    list-style-type: none;
+    
+    width: 40vw;
+    height: 60vh;
+    opacity: .25;
+    position: absolute;
+    left: 25%;
+    border-radius: 2px;
+    transition: transform 1s, opacity 1s;
+  }
+  
+  .list .act {
+    opacity: 1;
+  }
+  
+  .list .prev,
+  .list .next {
+    cursor: pointer;
+  }
+  
+  .list .prev {
+    transform: translateX(-130%) scale(.85);
+  }
+  
+  .list .next {
+    transform: translateX(130%) scale(.85);
+  }
+  
+  .list .hide {
+    transform: translateX(-200%) scale(.85);
+  }
+  
+  .list .new-next {
+    transform: translateX(200%) scale(.85);
+  }
+  
+  .list .hide,
+  .list .new-next {
+    opacity: 0;
+    transition: opacity .5s, transform .5s;
+  }
+  
+  .room1{
+    background-color: green;
+  }
+  .room2{
+    background-color:  red;
+  }
+  .room3{
+    background-color: black;
+  }
+  .room4{
+    background-color: yellow;
+  }
+  .room5{
+    background-color: blue;
+  }

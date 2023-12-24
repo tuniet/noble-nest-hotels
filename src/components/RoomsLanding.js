@@ -1,43 +1,104 @@
-import '../styles/Booking.css'
+import '../styles/RoomsLanding.css'
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { IoIosArrowDropdown  } from "react-icons/io";
-import { addDays, format } from 'date-fns';
-import { DateRange, DayPicker } from 'react-day-picker';
+
 
 const Booking = () => {
   const { t } = useTranslation();
-  const [range, setRange] = useState();
+    let delindexleft = 1;
+    let delindexright = 5;
 
+    const $ = selector => {
+        return document.querySelector(selector);
+    };
 
-  let footer = <p>Please pick the first day.</p>;
-  if (range?.from) {
-    if (!range.to) {
-      footer = <p>{format(range.from, 'PPP')}</p>;
-    } else if (range.to) {
-      footer = (
-        <p>
-          {format(range.from, 'PPP')}–{format(range.to, 'PPP')}
-        </p>
-      );
+    function next() {
+        if ($(".hide")) {
+        $(".hide").remove(); 
+        }
+  
+        /* Step */
+  
+        if ($(".prev")) {
+        $(".prev").classList.add("hide");
+        $(".prev").classList.remove("prev");
+        }
+  
+        $(".act").classList.add("prev");
+        $(".act").classList.remove("act");
+    
+        $(".next").classList.add("act");
+        $(".next").classList.remove("next");
+    
+        /* New Next */
+    
+        $(".new-next").classList.remove("new-next");
+        
+        const addedEl = document.createElement('li');
+       
+        $(".list").appendChild(addedEl);
+        addedEl.classList.add("next","new-next", 'room' + delindexleft);
+        if(delindexleft < 5)
+          delindexleft = delindexleft + 1;
+        else{
+          delindexleft = 1;
+        }
+    }
+  
+    function prev() {
+        $(".new-next").remove();
+        
+        /* Step */
+    
+        $(".next").classList.add("new-next");
+    
+        $(".act").classList.add("next");
+        $(".act").classList.remove("act");
+    
+        $(".prev").classList.add("act");
+        $(".prev").classList.remove("prev");
+    
+        /* New Prev */
+    
+        $(".hide").classList.add("prev");
+        $(".hide").classList.remove("hide");
+    
+        const addedEl = document.createElement('li');
+    
+        $(".list").insertBefore(addedEl, $(".list").firstChild);
+        addedEl.classList.add("hide" , 'room' + delindexright);
+        if(delindexright > 1)
+        delindexright = delindexright - 1;
+        else{
+          delindexright = 5;
+        }
+    }
+  
+  function slide(e){
+    /* Next slide */
+    let element = e.target
+    if (element.classList.contains('next')) {
+      next();
+      
+    /* Previous slide */
+      
+    } else if (element.classList.contains('prev')) {
+      prev();
     }
   }
+  
+
 
   return (
-    <div className="booking">
-      <div className='book-field ppl'>Adults / Childs <IoIosArrowDropdown  /></div>
-      <div className='book-field dates'>
-        <DayPicker
-            id="test"
-            mode="range"
-            selected={range}
-            footer={footer}
-            onSelect={setRange}
-        />Dates <IoIosArrowDropdown  /></div>
-      <div className='book-field rooms'>Room <IoIosArrowDropdown  /></div>
-      <Link className='link' to='/bookings'><span className='booking-btn'>BOOK NOW</span></Link>
-        
+    <div className="roomslanding">
+        <ul className="list" onClick={slide}>
+            <li className="hide room1" ></li>
+            <li className="prev room2"></li>
+            <li className="act room3"></li>
+            <li className="next room4"></li>
+            <li className="next new-next room5"></li>
+        </ul>
     </div>
   );
 };
