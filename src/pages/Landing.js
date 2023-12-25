@@ -1,7 +1,7 @@
 import '../styles/Landing.css'
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Booking from '../components/Booking';
+import Booking from '../components/BookingComp';
 import RoomsLanding from '../components/RoomsLanding';
 const Landing = () => {
   const { t } = useTranslation();
