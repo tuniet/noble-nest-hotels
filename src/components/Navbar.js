@@ -17,7 +17,8 @@ const Navbar = () => {
         <Link to="/rooms" className="link">{t('rooms')}</Link>
         <span className='separator'></span>
         <LanguageSelector />
-         MENU <IoMdMenu />
+        <button>BOOK NOW</button>
+        <IoMdMenu />
       </div>
     </div>
   );
