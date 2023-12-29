@@ -10,8 +10,10 @@ const Landing = () => {
     <div className='landing'>
       <div className='hero'>
         <div className='hero-txt'>
-          <h1 className='hero-title'>NOBEL NEST HOTEL</h1>
-          <Booking />
+          <div>
+            <h1 className='hero-title'>NOBEL NEST HOTEL</h1>
+            <Booking />
+          </div>
         </div>
         <div className='hero-info'>
 
