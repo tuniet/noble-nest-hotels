@@ -50,32 +50,30 @@ const Booking = () => {
     <div className="bookingcomp">
       <div className="dropdown">
       <span className='dr-button' onClick={handleOpenppl}>Adults:   {adults} / Childs:   {child} <MdOutlineKeyboardArrowDown /></span>
-      {openppl ? (
-        <div>
-        <div> Adults: <span className='addbutton' onClick={() => setadults(adults + 1)}>+</span> {adults} <span className='subbutton' onClick={() => (adults > 0) ? setadults(adults - 1) : null}>-</span></div>
-        <div> Childs: <span className='addbutton' onClick={() => setchild(child + 1)}>+</span> {child} <span className='subbutton' onClick={() => (child > 0) ? setchild(child - 1) : null}>-</span></div>
-      </div>
-      ) : null}
+        <div className={`dr ${openppl ? "active" : ""}`}>
+          <div> Adults: <span className='addbutton' onClick={() => setadults(adults + 1)}>+</span> {adults} <span className='subbutton' onClick={() => (adults > 0) ? setadults(adults - 1) : null}>-</span></div>
+          <div> Childs: <span className='addbutton' onClick={() => setchild(child + 1)}>+</span> {child} <span className='subbutton' onClick={() => (child > 0) ? setchild(child - 1) : null}>-</span></div>
+        </div>
     </div>
       <div className="dropdown">
       <span className='dr-button' onClick={handleOpendates}>Dates: {footer} <MdOutlineKeyboardArrowDown /></span>
-      {opendates ? (
-        <DayPicker
-          id="test"
-          mode="range"
-          selected={range}
-          footer={footer}
-          onSelect={setRange}
-        />
-      ) : null}
+        <div className={`dr ${opendates ? "active" : ""}`}>
+          <DayPicker
+            id="test"
+            mode="range"
+            selected={range}
+            footer={footer}
+            onSelect={setRange}
+          />
+        </div>
     </div>
     <div className="dropdown">
       <span className='dr-button' onClick={handleOpenrooms}>Rooms <MdOutlineKeyboardArrowDown /></span>
-      {openrooms ? (
-        <div>
-          Rooms
+        <div className={`dr ${openrooms ? "active" : ""}`}>
+          <div>
+            Rooms
+          </div>
         </div>
-      ) : null}
     </div>
     <Link className='link' to='/bookings'><span className='booking-btn'>BOOK NOW</span></Link>
     </div>

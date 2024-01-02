@@ -14,11 +14,18 @@
     border-bottom: 1px white solid;
 }
 .rdp{
-    color: white;
+    color: black;
 }
 .addbutton{
     cursor: pointer;
 }
 .subbutton{
     cursor: pointer;
+}
+.dr{
+    position: relative;
+    top: 5px;
+    left: 0;
+    background-color: white;
+    color: black;
 }
